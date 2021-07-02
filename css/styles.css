@@ -1,0 +1,437 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--main-col: #0a192e;
+	--main-light: #e5e3f9;
+	--alt-col: #1a53ff;
+	--alt-light: #1a53ff;
+	--horiz-margin: 0.5rem;
+}
+
+body {
+	line-height: 1.5;
+	color: var(--main-col);
+}
+
+h1, h2, h3, h4, p, li {
+	margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+	line-height: 1.2;
+	margin-bottom: 0.65em;
+}
+
+h1 {
+	font-size: 1.75rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+a, a:visited {
+	color: var(--alt-col);
+	text-decoration: none;
+	border-bottom: 2px solid var(--main-col);
+}
+
+a:hover {
+	color: var(--main-col);
+	border-bottom: 2px solid var(--main-col);
+}
+
+img {
+	max-width: 100%;
+}
+
+/* A wild utility class appears! */
+.hidden {
+	display: none;
+}
+
+header {
+	margin: 1rem var(--horiz-margin) 2rem var(--horiz-margin);
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	margin: 2rem 0 0 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav li {
+
+}
+
+nav a, nav a:visited, nav a:hover {
+	border-bottom: none;
+}
+
+.intro {
+	margin: 0 var(--horiz-margin);
+	text-align: center;
+}
+
+.btn, .btn:visited {
+	display: inline-block;
+	width: auto;
+	margin: 1rem auto;
+	padding: 1rem 3rem;
+	background: var(--alt-col);
+	border: 2px solid var(--main-col);
+	border-radius: .5rem;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.btn:hover {
+	background: var(--main-col);
+	color: #fff;
+}
+
+#about {
+	margin: 2rem var(--horiz-margin) 0 var(--horiz-margin);
+	padding: 0 0 2rem 0;
+}
+
+#about .image {
+	margin: 0 auto 1rem auto;
+	max-height: 12rem;
+	overflow: hidden;
+}
+
+#about img {
+	position: relative;
+	top: -6rem;
+	width: 100%;
+}
+
+#work {
+	padding: 2rem var(--horiz-margin);
+	background: var(--main-col);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+	background: #fff;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.card:last-of-type {
+	margin-bottom: 0;
+}
+
+.card h3, .card p:not(.card-btns) {
+	padding: var(--horiz-margin);
+}
+
+.card .image {
+	position: relative;
+	z-index: 10;
+	height: 14rem;
+	overflow: hidden;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+
+.card img {
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	filter: saturate(50%);
+	transition: transform .4s ease, filter .4s ease;
+}
+
+.card:hover img {
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	transform: scale(1.3);
+	transform: scale(1.3);
+	filter: saturate(100%);
+}
+
+.card-btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+#work .btn {
+	margin: 0 var(--horiz-margin) var(--horiz-margin) var(--horiz-margin);
+	padding: 0.5rem 1rem;
+	background: none;
+	border-color: var(--alt-col);
+	color: var(--alt-col);
+	font-size: .75rem;
+}
+
+#work .btn:hover {
+	border-color: var(--main-col);
+}
+
+#contact {
+	margin: 2rem var(--horiz-margin);
+}
+
+.contact-methods > div {
+	padding-bottom: 1rem;
+}
+
+.contact-methods a, .contact-methods a:visited, .contact-methods a:hover {
+	border: none;
+}
+
+.contact-methods svg {
+	height: 2rem;
+	top: .25rem;
+	position: relative;
+	vertical-align: text-bottom;
+}
+
+#contact .image {
+	margin: 0 auto;
+	max-height: 12rem;
+	overflow: hidden;
+}
+
+#contact img {
+	position: relative;
+	top: -6rem;
+	width: 100%;
+}
+
+.contact-image p {
+	text-align: center;
+}
+
+footer {
+	padding: 6rem 0 4rem 0;
+	background: var(--main-col);
+	color: #fff;
+	text-align: center;
+}
+
+footer section {
+	margin: 0 var(--horiz-margin);
+}
+
+footer a, footer a:visited {
+	color: var(--alt-light);
+}
+
+footer a:hover {
+	color: #fff;
+}
+
+.title {
+	padding: 4rem 0;
+	background: var(--main-col);
+	color: #fff;
+}
+
+.title h1 {
+	margin: 0 var(--horiz-margin);
+	text-align: center;
+}
+
+.project {
+	margin: 2rem var(--horiz-margin);
+}
+
+@media (min-width: 768px) {
+
+	h1 {
+		font-size: 3.5rem;
+		line-height: 1;
+	}
+
+	header, .intro, #about, .container, #contact, .project {
+		max-width: 970px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	nav {
+		flex-basis: 30%;
+	}
+
+	header ul {
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	.intro {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4rem 0;
+		text-align: left;
+	}
+
+	.intro h1 {
+		flex-basis: 100%;
+	}
+
+	.intro p {
+		flex-basis: 50%;
+	}
+
+	.intro .intro-btn {
+		flex-basis: 40%;
+		text-align: right;
+	}
+
+	#about {
+		display: flex;
+		align-items: center;
+	}
+
+	#about .image {
+		margin: 0 auto 1rem auto;
+		max-height: 100%;
+	}
+
+	#about img {
+		position: relative;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#about p {
+		margin-left: 4rem;
+	}
+
+	#work .container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2rem;
+	}
+
+	.card:last-of-type {
+		margin-bottom: 2rem;
+	}
+
+	.contact-methods {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.contact-methods > div {
+		margin-right: 2rem;
+	}
+
+	#contact .image {
+		margin: 0 auto;
+		max-height: 100%;
+	}
+
+	#contact img {
+		position: relative;
+		top: 0;
+		max-height: 20rem;
+		width: auto;
+	}
+
+	.contact-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		margin: 2rem auto 0 auto;
+	}
+
+	.contact-image p {
+		margin-left: 4rem;
+		text-align: left;
+	}
+
+	.contact-image em {
+		font-size: 0.75rem;
+	}
+
+	footer {
+		text-align: left;
+	}
+
+	footer section {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	footer nav {
+		flex-basis: 30%;
+	}
+
+	footer ul {
+		justify-content: space-between;
+		margin: 0;
+	}
+
+	footer li {
+
+	}
+
+	.project {
+		padding: 4rem 0;
+	}
+
+	.project img {
+		border-radius: 0.5rem;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	.project-intro {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.project-intro .image {
+		flex-basis: 45%;
+	}
+
+	.project-intro .text {
+		flex-basis: 55%;
+	}
+
+	.project section:not(.project-intro) h2 {
+		width: 75%;
+		margin: 2rem auto 0.65rem auto;
+	}
+
+	.project section:not(.project-intro) p, .project section:not(.project-intro) ul {
+		width: 75%;
+		margin: 0 auto 0.65rem auto;
+	}
+
+	.project section:not(.project-intro) .image {
+		padding-top: 2rem;
+	}
+
+}
