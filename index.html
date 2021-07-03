@@ -40,7 +40,7 @@
 				</div>
 				<h3>Gameshow App</h3>
 				<p></p>
-				<p class="card-btns"><a href="" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
+				<p class="card-btns"><a href="work/gameshow.html" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
 			</article>
 			<article class="card">
 				<div class="image">
@@ -48,7 +48,7 @@
 				</div>
 				<h3>Web App Dashboard</h3>
 				<p></p>
-				<p class="card-btns"><a href="" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
+				<p class="card-btns"><a href="work/dashboard.html" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
 			</article>
 			<article class="card">
 				<div class="image">
@@ -56,7 +56,7 @@
 				</div>
 				<h3>Photo Gallery</h3>
 				<p></p>
-				<p class="card-btns"><a href="" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
+				<p class="card-btns"><a href="work/gallery.html" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
 			</article>
 			<article class="card">
 				<div class="image">
@@ -64,7 +64,7 @@
 				</div>
 				<h3>Style Guide</h3>
 				<p></p>
-				<p class="card-btns"><a href="" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
+				<p class="card-btns"><a href="work/style-guide.html" class="btn">Read more</a> <a href="" class="btn">View Online</a></p>
 			</article>
 		</div>
 	</section>
@@ -111,6 +111,21 @@
     </section>
   </div>
 </footer>
-<script src="js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
 </body>
 </html>

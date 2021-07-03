@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Photo Gallery Project • Austin Baxter, Front-End Web Developer</title>
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/styles.css">
+	<meta name="description" content="Austin Baxter: Front-End Web Developer">
+</head>
+<body>
+	<header>
+			<a href="../">Austin Baxter</a>
+		<nav>
+			<ul>
+				<li><a href="../#about">About</a></li>
+				<li><a href="../#work">Work</a></li>
+				<li><a href="../#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="title">
+		<div class="container">
+			<h1>Photo Gallery Site</h1>
+		</div>
+	</section>
+	<article class="project">
+		<section class="project-intro">
+			<div class="image">
+				<img src="../img/photo-gallery.jpg" alt="icon of a gallery of photos">
+			</div>
+			<div class="text">
+				<h2>Concept:</h2>
+				<p>I built this website to showcase a few random pictures I liked.</p>
+			</div>
+		</section>
+		<section>
+			<h2>Step 1:</h2>
+			<p>The first step was figuring out the logic behind the gallery, and creating pseudo-code to rough out the JavaScript code. I did this so that I could try some early designs without worrying about getting stuck trying to maintain an inconsistent interface. It was also useful to get an idea of what elements worked together, what worked out of place, and what could be changed to improve the user experience.</p>
+			<h2>Step 2:</h2>
+			<p>Next I worked on actually creating a model. I found the JavaScript APIs and started playing around with it to create some of the basic models. Some basic structures became extremely important: triangles for polygons.</p>
+			<p>So I create an index.html, with this file I create another file, js/app.js. Basically, I worked through a "Master" of the day project and built up more and more confidence with the language.</p>
+			<h2>Core Technologies:</h2>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+			<h2>Final Result:</h2>
+			<p>The final version of this project is just </p>
+			<p><a href=""><strong>You can view the project online here &rarr;</strong></a></p>
+			<p><a href="">Or view the code on GitHub.</a></p>
+		</section>
+	</article>
+
+	<footer>
+		<div class="container">
+			<section>
+				<h4>Austin Baxter: Front-End Web Developer</h4>
+				<nav>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $("a").on('click', function(event) {
+	    if (this.hash !== "") {
+	      event.preventDefault();
+	      var hash = this.hash;
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      }, 800, function(){
+	        window.location.hash = hash;
+	      });
+	    }
+	  });
+	});
+	</script>
+</body>
+</html>
