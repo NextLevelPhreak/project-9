@@ -15,11 +15,11 @@ body {
 	color: var(--main-col);
 }
 
-h1, h2, h3, h4, h6, p, li {
+h1, h2, h3, h4, p, li {
 	margin-top: 0;
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h4,{
 	line-height: 1.2;
 	margin-bottom: 0.65em;
 }
@@ -38,9 +38,6 @@ h3 {
 
 h4 {
 	font-size: 1rem;
-}
-h6 {
-	margin-left: 4rem;
 }
 a, a:visited {
 	color: var(--alt-col);
